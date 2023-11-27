@@ -28,7 +28,7 @@ const question = [
       "A informalidade do banco ao contatar o cliente", "O DDD do número usado pelo banco", "Não tende a ser um golpe", "O domínio (site) estranho enviado"
    ]},
    {number: 6, text: "Como o remetente identificou que o SMS se trata de um golpe <br> <br> <img src=./imgs/bet.jpg class=imgPers >", answer: [
-      "O remetente não se registrou em nenhuma plataforma ou sorteio, logo não há motivo para receber um SMS oferecendo um prêmio. ", "O SMS está oferecendo dinheiro muito facilmente, algo que não existe.", "A informalidade da mensagem, comprova a suspeita de que o SMS trata-se de um golpe.", "No começo da mensagem as palavras “Fortune tiger” mostram que se trata de uma casa de apostas, portanto é um golpe."
+      "O remetente não se registrou em nenhuma plataforma ou sorteio, logo não há motivo para receber um SMS oferecendo um prêmio. ", "O SMS está oferecendo dinheiro muito facilmente, algo que não existe.", "A informalidade da mensagem, comprova a suspeita de que o SMS trata-se de um golpe.", "No começo da mensagem o título “Fortune tiger” mostra que se trata de uma casa de apostas, portanto é um golpe."
    ]}
 ]
 const totalQuestNumber = question.length
@@ -147,6 +147,7 @@ function showResults() {
       rep = 1
       defineQuestion()
    })
+   document.querySelector(".restart").style.visibility = `visible`
 }
 
 document.querySelector(".continuar").addEventListener("click", () => {
