@@ -210,3 +210,33 @@ img.imgPers {
     font-size: 4vh;
     width: 60%;
 }
+
+.restart {
+    position: absolute;
+    top: 0; right: 0; bottom: 0; left: 0;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    margin-bottom: 1%;
+    padding: 1%;
+
+    border-radius: 3%;
+    border: 1px solid black;
+
+    width: fit-content;
+    height: fit-content;
+
+    font-size: 5vh;
+    text-align: center;
+    font-weight: 500;
+    font-family: Arial, Helvetica, sans-serif;
+
+
+    background-color: rgb(36, 180, 36);
+
+    visibility: hidden;
+}
+
+.restart:hover {
+    background-color: rgb(36, 180, 36, 0.7);
+}
