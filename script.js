@@ -2,6 +2,8 @@ const done = []
 let randomQuest
 let start = true
 const review = [
+   "Você está completamente despreparado para evitar golpes",
+   "Você está muito vulnerável e despreparado para evitar golpes",
    "Você está muito vulnerável e despreparado para evitar golpes",
    "Você está muito vulnerável e despreparado para evitar golpes",
    "Você está um pouco vulnerável e despreparado para evitar golpes",
@@ -29,6 +31,12 @@ const question = [
    ]},
    {number: 6, text: "Como o remetente identificou que o SMS se trata de um golpe <br> <br> <img src=./imgs/bet.jpg class=imgPers >", answer: [
       "O remetente não se registrou em nenhuma plataforma ou sorteio, logo não há motivo para receber um SMS oferecendo um prêmio. ", "O SMS está oferecendo dinheiro muito facilmente, algo que não existe.", "A informalidade da mensagem, comprova a suspeita de que o SMS trata-se de um golpe.", "No começo da mensagem o título “Fortune tiger” mostra que se trata de uma casa de apostas, portanto é um golpe."
+   ]},
+   {number: 7, text: "De acordo com um estudo do Nord VPN, a senha mais comum do mundo em 2023 é:", answer: [
+      "12345678", "(nome)+2023", "Data de nascimento", "Mohamed"
+   ]},
+   {number: 8, text: "Se você cria uma senha e não consegue se lembrar dela, você deveria:", answer: [
+      "Escrever uma dica sobre a senha que só faz sentido para você", "Falar para todo mundo", "Escrever a senha em um papel e escondê-lo", "Tatuar no seu corpo"
    ]}
 ]
 const totalQuestNumber = question.length
@@ -38,7 +46,9 @@ const answer = {
    question_3: null,
    question_4: null,
    question_5: null,
-   question_6: null
+   question_6: null,
+   question_7: null,
+   question_8: null
 }
 const rightAnswer = {
    question_1: 1,
@@ -46,7 +56,9 @@ const rightAnswer = {
    question_3: 1,
    question_4: 1,
    question_5: 1,
-   question_6: 1
+   question_6: 1,
+   question_7: 1,
+   question_8: 1
 }
 let resultCount = 0
 let resultArray = []
@@ -81,7 +93,7 @@ function defineOrderAnswer(randomQuest) {
 let rep = 0
 function defineQuestion(rep) {
    while (true) {
-      if (!rep) randomQuest = Math.floor((Math.random() * 6));
+      if (!rep) randomQuest = Math.floor((Math.random() * 8));
       else {
          randomQuest = done[rep]
          rep++
